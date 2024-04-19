@@ -20,6 +20,7 @@ public class Hello {
 
 		// 3 자동 줄 맞춤
 		// 단축키 : ctrl + shift + f
+		System.out.println("점심 식사는 맛있게 하셨나요?~~");
 
 	}
 
