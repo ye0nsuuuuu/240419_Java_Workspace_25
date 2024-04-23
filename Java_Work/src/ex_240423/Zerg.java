@@ -46,6 +46,32 @@ public class Zerg {
 		System.out.println("내가 선택한 전략 : " + strategy);
 		
 	}
+	// 생성자 -> 객체를 생성시, 멤버의 파라미터를 미리 사용할지 여부를 정하기. 
+	// 매개변수 3개짜리 생성자
+	public Zerg(String drone, String zergling, String hydra) {
+		super();
+		this.drone = drone;
+		this.zergling = zergling;
+		this.hydra = hydra;
+	}
+	
+	// 매개변수가 없는 생성자, = 디폴트 생성자라고 함. 
+	// 별로 말이 없으면, 시스템이 알아서 만들어줌. 
+	// 하지만, 내가 따로 매개변수가 있는 생성자를 만들면, 기본 생성자를 안 만들어줌. 
+	public Zerg() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	// toString , 해당 객체에 있는 내용을 한방에 출력해주는 메서드 만들기.
+	// 우클릭 -> Source -> Generate toString -> 멤버 3개 선택하고 만들기, 옵션 선택 무. 
+	@Override
+	public String toString() {
+		return "Zerg [drone=" + drone + ", zergling=" + zergling + ", hydra=" + hydra + "]";
+	}
+	
+	
+ 
+	
 	
 
 }

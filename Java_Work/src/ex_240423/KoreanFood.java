@@ -8,6 +8,9 @@ public class KoreanFood {
 	private int foodPrice;
 	private String foodPlace;
 	
+	// 전역으로 사용이되고, 상수로 사용함. -> 전역 상수
+	private static final String projectName = "오늘 점심 메뉴 선정 프로젝트";
+	
 	// 방법1
 	// getter/setter 라는 것을 추가하기. 
 	// 반자동( 코드 스니펫으로 자동 만들기.)
@@ -54,7 +57,19 @@ public class KoreanFood {
 		this.foodPlace = foodPlace;
 	}
 	
+	// static 전역 메서드 만들기, 인스턴스 안만들고, 
+	// 해당 클래스명으로 바로 접근이 가능하다. 
+	// 이유? 클래스가, 이미 실행 시점에, 메모리에 로드가 되어서, 
+	public static String showStaticMember() {
+		return projectName;
+		
+	}
 	
+	// 귀찮으니, 다 출력하는 함수 만들기. 인스턴스 메서드 방법으로 
+	public void showInfo() {
+		System.out.println("오늘 점심 메뉴 : " + this.foodName + ", 가격 : " + this.foodPrice);
+		System.out.println("장소 : " + this.foodPlace);
+	}
 	
 	
 	
