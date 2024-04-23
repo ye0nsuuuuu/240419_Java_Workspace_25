@@ -1,10 +1,15 @@
 package ex_240423;
 
 public class Zerg {
+	// Zerg 클래스 이용하는 모든 객체에서 공동으로 사용이 가능한 
+	// static 설명,: 전역 상수
+	public static final String COMMONTE_STRING = "스타1에서 저그가 짱이다. 개인적인 의견.";
+	
 	// 멤버
 	private String drone;
 	private String zergling;
 	private String hydra;
+	
 	
 	// 멤버의 값에 접근 또는 설정을 위해서 , getter/setter를 만든다. 
 	public String getDrone() {
