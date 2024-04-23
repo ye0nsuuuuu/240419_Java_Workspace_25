@@ -15,6 +15,8 @@ public class TodayLunchMenu {
 		// KoreanFood(String foodName, int foodPrice, String foodPlace)
 		// 객체 만들어보기. 인스턴스화 하기. 이렇게 이름을 불러요. 
 		KoreanFood bibimbab = new KoreanFood("비빔밥",9000,"본죽비빔밥");
+		KoreanFood bulgogi = new KoreanFood("불고기",7500,"태산");
+		KoreanFood dolsot = new KoreanFood("돌솥",7500,"우정비빔밥");
 		
 		// 객체 -> 수납도구 -> 멤버와 함수가 있다. 
 		// 출력해보기. 
