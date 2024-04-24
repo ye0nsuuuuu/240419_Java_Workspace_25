@@ -19,6 +19,11 @@ public class ScannerTest1 {
 		
 		System.out.println("가입할 메일은: " + userEmail);
 		
+		// 자원 반납. -> scanner 라는 객체를 생성자 호출해서 초기화 했다. 
+		// 동적 메모리 어딘가에 자리를 잡았다(메모리 사용했다.) , 
+		// 사용했던 메모리를 반납함. 
+		scanner.close();
+		
 
 	}
 
