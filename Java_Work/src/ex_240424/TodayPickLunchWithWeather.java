@@ -42,15 +42,33 @@ public class TodayPickLunchWithWeather {
 //		}
 		// 숫자 비교 할 경우, 연산자 ==
 		// 문자열를 비교 할 경우, 문자열.equals("") => 
-		if(weather.equals("비")) {
+//		if(weather.equals("비")) {
+//			System.out.println("비가 오는 경우 삼선우동 추천합니다.");
+//		} else if (weather.equals("흐림")) {
+//			System.out.println("흐림 일 경우 밀면 추천합니다.");
+//		} else if (weather.equals("맑음")) {
+//			System.out.println("맑음 일 경우 된장찌개 추천합니다.");
+//		} else if (weather.equals("바람")) {
+//			System.out.println("바람이 많이 부는 경우 돼지국밥 추천합니다.");
+//		} else {
+//			System.out.println("디폴트 비빔밥 추천합니다.");
+//		}
+		
+		//switch 
+		switch (weather) {
+		case "비": 
 			System.out.println("비가 오는 경우 삼선우동 추천합니다.");
-		} else if (weather.equals("흐림")) {
+			break;
+		case "흐림": 
 			System.out.println("흐림 일 경우 밀면 추천합니다.");
-		} else if (weather.equals("맑음")) {
+			break;
+		case "맑음": 
 			System.out.println("맑음 일 경우 된장찌개 추천합니다.");
-		} else if (weather.equals("바람")) {
+			break;
+		case "바람": 
 			System.out.println("바람이 많이 부는 경우 돼지국밥 추천합니다.");
-		} else {
+			break;
+		default:
 			System.out.println("디폴트 비빔밥 추천합니다.");
 		}
 		
