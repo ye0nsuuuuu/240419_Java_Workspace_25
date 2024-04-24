@@ -1,5 +1,7 @@
 package ex_240424;
 
+import java.util.Scanner;
+
 public class OperatorTest1 {
 
 	public static void main(String[] args) {
@@ -21,7 +23,14 @@ public class OperatorTest1 {
 		int result1 = (x>y) ? x:y;
 		System.out.println("result1 : " + result1);
 		
+		// 날씨관련 음식추천 함수 사용해보기. 
+		Scanner scanner = new Scanner(System.in);
+		TodayPickLunchWithWeatherWhile3.recommendFood(scanner);
 
 	}
 
 }
+
+
+
+
