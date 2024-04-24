@@ -41,10 +41,10 @@ public class TodayPickLunchWithWeatherWhile {
 		Scanner scanner = new Scanner(System.in);
 		int n = 0;
 		System.out.println("6번 메뉴 추천 하기, 5번 종료하기");
-		while ((n = scanner.nextInt()) != 5) {
-			//메인 메뉴 호출 
+		//상태 변수 , isgoing
+		String isgoing = "Y";
+		while (!isgoing.equals("Y")) {
 			showMainMenu();
-			
 			selectFood(n);
 		}
 		
