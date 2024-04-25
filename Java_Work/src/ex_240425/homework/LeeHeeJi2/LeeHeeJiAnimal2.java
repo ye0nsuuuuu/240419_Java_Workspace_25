@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class LeeHeeJiAnimal2 {
 
-	public static void main(String[] args) {
 		
 		private String name;
 		private int age;
@@ -42,7 +41,5 @@ public class LeeHeeJiAnimal2 {
 			System.out.println("움직임 : " + action);
 			
 		}
-		
-	}
 
 }
