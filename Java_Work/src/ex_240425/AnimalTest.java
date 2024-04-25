@@ -19,6 +19,17 @@ public class AnimalTest {
 		cat1.speakSound("야옹~~~");
 		System.out.println("고양이가 사는 곳 : " + cat1.getPlace());
 		
+		// 다형성.
+		// 원래 : A a = new A();
+		// 다형성 부모 타입으로 받기 : SuperA a1 = new A();
+		// 다형성으로 담을 때 좋지만, 다시 원래의 형으로 돌아갈 때는 
+		// 다운 캐스팅을 하여야 한다. 
+		Animal ani1 = new Cat();
+		Animal ani2 = new Dog();
+		
+		Animal [] animals = new Animal[17];
+		
+		
 		
 
 	}
