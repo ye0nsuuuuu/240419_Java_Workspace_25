@@ -1,4 +1,4 @@
-package ex_240423;
+package ex_240423.homework;
 
 public class sportsData {
 		private String sportsName;

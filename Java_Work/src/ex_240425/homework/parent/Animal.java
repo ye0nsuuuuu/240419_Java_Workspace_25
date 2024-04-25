@@ -1,4 +1,4 @@
-package ex_240425;
+package ex_240425.homework.parent;
 
 import java.util.Arrays;
 
@@ -53,19 +53,6 @@ public class Animal { // 클래스로 감싸서 캡슐화
 	public void moveAction(String action) {
 		System.out.println("움직임 : " + action);
 		
-	}
-
-	
-	//생성자 , 모든 멤버가 속해 있는 생성자 만들고,
-	public Animal(String name, int age, String[] favoriteFood) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.favoriteFood = favoriteFood;
-	}
-	// 매개변수가 아무것도 없는 기본 생성자도 만들기.
-	public Animal() {
-	
 	}
 	
 }
