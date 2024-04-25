@@ -2,7 +2,7 @@ package ex_240425.homework.NamGwiYeon;
 
 import java.util.Arrays;
 
-public class Animal {
+public class NamGwiYeonAnimal {
 	
 	private String name;
 	private int age;
