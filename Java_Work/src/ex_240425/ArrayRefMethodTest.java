@@ -1,5 +1,9 @@
 package ex_240425;
 
+import java.util.Scanner;
+
+import ex_240424.TodayPickLunchWithWeatherWhile3;
+
 public class ArrayRefMethodTest {
 	// 이 메서드는 크기3개인, 문자열 타입의 배열을 생성 해주는 메서드. 
 	public static String[] makeStringArray() {
@@ -30,8 +34,12 @@ public class ArrayRefMethodTest {
 		}
 		int lunchMenuLsyMemoryAddress2 = System.identityHashCode(lunchMenuLsy2);
 		System.out.println("lunchMenuLsy2 의 메모리 위치 주솟값 : " + lunchMenuLsyMemoryAddress2);
+		
+		Scanner scanner = new Scanner(System.in);
+		TodayPickLunchWithWeatherWhile3.recommendFood(scanner);
 
 	}
+	
 
 }
 
