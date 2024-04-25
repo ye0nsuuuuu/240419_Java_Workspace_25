@@ -1,4 +1,4 @@
-package LeeHanSol;
+package ex_240425.homework.LeeHanSol;
 
 import java.util.Arrays;
 

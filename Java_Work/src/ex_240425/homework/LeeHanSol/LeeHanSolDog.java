@@ -1,6 +1,4 @@
-package LeeHansSol;
-
-import ex_240425.LeeHanSolAnimal;
+package ex_240425.homework.LeeHanSol;
 
 public class LeeHanSolDog extends LeeHanSolAnimal{
 	private String place;
