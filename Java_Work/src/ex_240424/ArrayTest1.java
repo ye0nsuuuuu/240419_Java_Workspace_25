@@ -3,7 +3,7 @@ package ex_240424;
 public class ArrayTest1 {
 
 	public static void main(String[] args) {
-		// 배열 정의, 방법1
+		// 배열 정의, 방법1 -> 계란판: 같은 타입만 저장, 크기 고정.
 		int [] intArray = new int[5];
 		int  intArray2 [] = new int[5];
 		

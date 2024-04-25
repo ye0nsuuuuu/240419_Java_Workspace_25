@@ -25,7 +25,7 @@ public class ArrayTest2 {
 		System.out.println("입력한 양수 5개중 가장 큰값은: " + max);
 		scanner.close();
 
-		// 얕은 복사 간단 예제
+		// 얕은 복사 간단 예제 -> 바로가기. 
 		int copyArray[] = new int[5];
 		// 참조형 변수, 실제로 , 메모리 위치 주솟값이 들어가 있다.
 		// 같다는 개념은 저장하고 있는 메모리 위치 주솟값을 말한다.
@@ -49,8 +49,11 @@ public class ArrayTest2 {
 
 		// 메모리 위치 주솟값 출력하기. copyArray
 		int intArrayAddress = System.identityHashCode(intArray);
-		System.out.println("copyArray 메모리 위치 주솟값: " + intArrayAddress);
+		System.out.println("intArray 메모리 위치 주솟값: " + intArrayAddress);
 
 	}
 
 }
+
+
+
