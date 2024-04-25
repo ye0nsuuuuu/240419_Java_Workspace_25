@@ -1,6 +1,6 @@
-package ex_240425;
+package ex_240425.homework.Kimminsu;
 
-public class Bat extends KimminsuAnimal{
+public class KimminsuBat extends KimminsuAnimal{
 	private String place;
 	private String movie;
 	
