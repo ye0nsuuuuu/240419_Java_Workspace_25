@@ -26,6 +26,10 @@ public class AnimalTest {
 		// 다운 캐스팅을 하여야 한다. 
 		Animal ani1 = new Cat();
 		Animal ani2 = new Dog();
+		String [] catFoodLiStrings = {"참치캔","사료"};
+		
+		Cat cat2 = new Cat("야옹이", 3, catFoodLiStrings, "상용집");
+		cat2.showInfo();
 		
 		Animal [] animals = new Animal[17];
 		

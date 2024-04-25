@@ -20,6 +20,25 @@ public class Cat extends Animal{
 		super(); // 부모의 기본 생성자를 호출 하는 키워드
 		// TODO Auto-generated constructor stub
 	}
+
+	// 자식 클래스 Cat , 생성자 
+	public Cat(String name, int age, String[] favoriteFood, String place) {
+		// super(name, age, favoriteFood); => Animal(name, age, favoriteFood);
+		super(name, age, favoriteFood);
+		this.place = place;
+	}
+	
+	// 정보를 출력하는 함수 만들기. 
+	public void showInfo() {
+		System.out.println("이름 : "+ this.getName());
+		System.out.println("나이 : "+ this.getAge());
+		for(String likeFood: this.getFavoriteFood()) {
+			System.out.println("좋아하는 음식 : " + likeFood);
+		}
+		System.out.println("사는 곳  : "+ this.getPlace());
+		
+		
+	}
 	
 	
 
