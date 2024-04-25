@@ -1,5 +1,7 @@
 package ex_240425.homework.ohhyunje;
 
+import ex_240425.Animal;
+
 public class OhhyunjeDog extends Animal {
 	private String kind;
 	private String place;
