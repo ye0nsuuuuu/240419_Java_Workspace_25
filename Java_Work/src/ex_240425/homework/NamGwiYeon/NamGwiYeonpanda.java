@@ -1,6 +1,6 @@
 package ex_240425.homework.NamGwiYeon;
 
-public class panda extends Animal{
+public class NamGwiYeonpanda extends NamGwiYeonAnimal{
 	
 	private String place;
 	private String family;
