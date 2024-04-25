@@ -1,4 +1,4 @@
-package ex_240425;
+package ex_240425.homework.KimSoYoung;
 
 public class KimSoyoungZIZI extends KimSoyoungAnimal{
 	private String place;
