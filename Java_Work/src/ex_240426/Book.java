@@ -36,6 +36,13 @@ public class Book {
 		this.bookPrice = bookPrice;
 	}
 	
+	
+	// toString 자동완성. 
+	@Override
+	public String toString() {
+		return "Book [bookName=" + bookName + ", bookAuthor=" + bookAuthor + ", bookPrice=" + bookPrice + "]";
+	}
+	
 
 	
 	
