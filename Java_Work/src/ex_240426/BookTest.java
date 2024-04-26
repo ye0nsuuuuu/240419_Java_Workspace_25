@@ -43,8 +43,9 @@ public class BookTest {
 //		}
 		
 		// 2) 메서드를 만들어서 이용해볼까. 
-		inputBook(bookArray,book1,book2,book3);
+//		inputBook(bookArray,book1,book2,book3);
 		
+			
 		// 결론, 데이터를 여러개를 한번에 넣는 경우, 테스트용, 더미 데이터 넣을 때, 
 		// 실제로 , 책 한권에 한 객체씩 만 들어가는게 원칙. 
 		// 게시글, 하나의 게시글이 한 객체 라서, 하나씩 들어 갑니다. 
