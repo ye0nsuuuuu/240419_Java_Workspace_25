@@ -7,6 +7,13 @@ public class MainRestaurant {
 	public static void main(String[] args) {
 		// 확인 , 쌀쌀 국수 
 		RiceRiceNoodle lsy = new RiceRiceNoodle();
+		
+		// 인터페이스로 다형성 확인, 해당 인터페이스를 구현하면, 마치 상속처럼, 부모타입으로 자식타입을 
+		// 받는 것처럼 구현이 가능하다. 
+		
+		RiceNoodle lsyRiceNoodle = new RiceRiceNoodle();
+		
+		
 		System.out.println("이상용 쌀쌀국수 만들기 프로젝트");
 		
 		lsy.boiledNoodle("5");
