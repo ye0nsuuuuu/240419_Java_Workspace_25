@@ -1,5 +1,7 @@
 package ex_240501;
 
+import ex_240425.Animal;
+
 class Person { // 암묵적으로 Object 클래스를 상속 받고 있다. 
 	private String name, email;
 
@@ -37,12 +39,13 @@ class Person { // 암묵적으로 Object 클래스를 상속 받고 있다.
 	
 	// 방법1, Object 를 똑같은 파라미터 타입으로 재정의.
 //	@Override
-//	//equals 를 재정의해서, name과 , email 2개 같다면, true, 아니면 false 반환하기. 
+//	//equals 를 재정의해서, name과 , email 2개 같다면, true, 아니면 false 반환하기.
+	// 담을 때 다 담을수 있다. -> 담을 때 좋다 -> 꺼낼 때, 불편하다. 
 //	public boolean equals(Object obj ) { // 부모와 같은 이름의 메서드를 재정의.
 //		if(obj instanceof Person) {
 //		Person person = (Person)obj;
 	
-	// 방법2 
+	// 방법2 , 담을 때 부터, 조건의 타입을 Person 타입만 담겠다. 
 	public boolean equals(Person person) { 
 		if(person.getName() == this.name && person.getEmail() == this.email) {
 			return true;
@@ -58,6 +61,7 @@ public class ObjectMethodTest {
 	public static void main(String[] args) {
 		Person p1 = new Person("이상용","lsy@naver.com");
 		Person p2 = new Person("이상용","lsy@naver.com");
+		Animal ani1 = new Animal();
 		//Object 의 toString 메서드 임. 
 		// toString 을 재정의하고 나서 출력 함. 
 		String result = p1.toString();
