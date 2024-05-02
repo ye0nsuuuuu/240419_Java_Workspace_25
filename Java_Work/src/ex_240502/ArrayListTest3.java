@@ -31,6 +31,7 @@ public class ArrayListTest3 {
 			System.out.println(integer);
 //			int n = iterator.next();
 //			System.out.println("n 값이 들어있니 : " + n);
+			// 자동 언방식, 참조형 -> 기본형 
 			sum += integer;
 		}
 		System.out.println("벡터에 있는 정수 합 : " + sum);
