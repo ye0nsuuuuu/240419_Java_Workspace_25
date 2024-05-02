@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import util.LocalDateTimeMake;
 import util.dto.LunchFood;
 
 public class ArrayListTest {
@@ -18,17 +19,19 @@ public class ArrayListTest {
 		// LocalDate 한번 사용해보기.
 		// LocalDate currentDate = LocalDate.now();
 		// 년,월,일 표현
-		LocalDate currentDate = LocalDate.now();
+//		LocalDate currentDate = LocalDate.now();
 
 		// 년,월,일, 시,분,초 -> 포맷팅도 다하게끔.
-		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
-		String nowString = now.format(dateTimeFormatter);
+//		LocalDateTime now = LocalDateTime.now();
+//		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+//		String nowString = now.format(dateTimeFormatter);
 		// 확인.
-		System.out.println(nowString);
+//		System.out.println(nowString);
+		
+		String nowTime = LocalDateTimeMake.now();
 
 		// 메뉴 추가하기.
-		LunchFood lunchFood = new LunchFood(9000, nowString, nowString, "서면", "김치찌개");
+		LunchFood lunchFood = new LunchFood(9000, nowTime, nowTime, "서면", "김치찌개");
 		// 확인
 		System.out.println(lunchFood.toString());
 
