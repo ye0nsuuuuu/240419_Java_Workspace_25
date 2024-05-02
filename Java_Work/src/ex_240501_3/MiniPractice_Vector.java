@@ -29,9 +29,15 @@ public class MiniPractice_Vector {
 				System.out.println("메뉴 입력(예_콤마로 분리)라면,김밥>>");
 				String foodList = scanner.next();
 
+				// 메뉴 입력 : 라면,김밥,국수
+				// st 인스턴스(객체, 수납도구) 안에는 , 콤마를 기준으로 나누어진 문자열 조각이 있다.
+				//			1행   2행   3행
+				// st 안에 , 라면  김밥  국수 
 				StringTokenizer st = new StringTokenizer(foodList, ",");
 				Vector<String> foodListVector = new Vector<String>();
-				while (st.hasMoreTokens()) {
+				//st.hasMoreTokens() 의 시작 위치, 0행이라고 표현. 
+				while (st.hasMoreTokens()) { // 0행 다음은 1행이죠? 있음.
+					// st.nextToken() : 1행을 가지고 와요. 
 					String food = st.nextToken();
 					foodListVector.add(food);
 				}

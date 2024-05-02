@@ -1,6 +1,7 @@
 package ex_240502;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class ArrayListTest2 {
@@ -28,6 +29,33 @@ public class ArrayListTest2 {
 				longestIndex = i;
 		}
 		System.out.println("\n가장 긴 이름은 : " + a.get(longestIndex));
+		
+		//iterator 반복자 도구 이용해서, 누적 합 구해보기. 
+		ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+		// Wrapper 클래스 이용해도 되지만, jdk 해서, 오토 박싱(기본형 -> 참조형) 형변환 해준다.
+		intArrayList.add(100);
+		intArrayList.add(200);
+		intArrayList.add(300);
+		intArrayList.add(400);
+		
+		//iterator 정의하기. 
+		Iterator<Integer> iterator = intArrayList.iterator();
+		// 반복문 패턴 이용해서, 출력해보기.
+		// 시작 위치, 0행으로 잡고, 각 요소를 1행, 2행, 3행, 이런식으로 접근하기. 
+		// iterator.hasNext() : 0행에서, 다음 요소 1행이 있니?
+		while (iterator.hasNext()) {
+			// 1행의 요소를 가지고 온다. 
+			Integer integer = (Integer) iterator.next();
+			System.out.println(integer);
+			
+		}
+		
+		// 반복문 패턴 이용해서, 누적합 구해보기. 
 	}
 
 }
+
+
+
+
+
