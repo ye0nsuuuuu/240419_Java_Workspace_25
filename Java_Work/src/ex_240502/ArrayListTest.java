@@ -3,7 +3,9 @@ package ex_240502;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
+import util.ArrayListUtils;
 import util.LocalDateTimeMake;
 import util.dto.LunchFood;
 
@@ -27,7 +29,7 @@ public class ArrayListTest {
 //		String nowString = now.format(dateTimeFormatter);
 		// 확인.
 //		System.out.println(nowString);
-		
+
 		String nowTime = LocalDateTimeMake.now();
 
 		// 메뉴 추가하기.
@@ -35,6 +37,27 @@ public class ArrayListTest {
 		// 확인
 		System.out.println(lunchFood.toString());
 
+		// 메뉴 추가하기.
+		LunchFood lunchFood2 = new LunchFood(8000, nowTime, nowTime, "가야밀면", "밀면");
+
+		// 메뉴 추가하기.
+		LunchFood lunchFood3 = new LunchFood(10000, nowTime, nowTime, "문범초밥", "초밥");
+		
+		// ArrayList 에 담기, 제너릭으로 , 타입 지정. LunchFood
+		ArrayList<LunchFood> lunchFoodList = new ArrayList<LunchFood>();
+		lunchFoodList.add(lunchFood);
+		lunchFoodList.add(lunchFood2);
+		lunchFoodList.add(lunchFood3);
+		
+		// 꺼내서 , 출력 해보기. 출력해주는 기능 만들기. 
+		ArrayListUtils.showArrayList(lunchFoodList);
+		
+
 	}
 
 }
+
+
+
+
+
