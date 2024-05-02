@@ -51,17 +51,17 @@ public class HashMapUtils {
 
 	// 삭제
 	public static void deleteElem(HashMap<String, Person> hashMap, String searchName) {
-
-		Set<String> keys = hashMap.keySet(); // 모든 키를 Set 컬렉션에 받아옴
-		Iterator<String> it = keys.iterator(); // Set에 접근하는 Iterator 리턴
-
-		while (it.hasNext()) {
-			String key = it.next(); // 키
-			if (key.equals(searchName)) {
-				System.out.println(searchName + "님 삭제 완료");
-				hashMap.remove(searchName);
-			}
-		}
+		hashMap.remove(searchName);
+//		Set<String> keys = hashMap.keySet(); // 모든 키를 Set 컬렉션에 받아옴
+//		Iterator<String> it = keys.iterator(); // Set에 접근하는 Iterator 리턴
+//
+//		while (it.hasNext()) {
+//			String key = it.next(); // 키
+//			if (key.equals(searchName)) {
+//				System.out.println(searchName + "님 삭제 완료");
+//				hashMap.remove(searchName);
+//			}
+//		}
 	}// 삭제 닫기
 
 	// 랜덤
