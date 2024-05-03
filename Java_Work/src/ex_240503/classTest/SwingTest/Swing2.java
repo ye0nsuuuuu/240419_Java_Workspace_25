@@ -1,5 +1,6 @@
 package ex_240503.classTest.SwingTest;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -8,14 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-class MyPanel extends JPanel {
-
-}
-
 
 // 작업순서1, JFrame 그림도구 상속받기. 
-public class Swing1 extends JFrame{
-	public Swing1() {
+public class Swing2 extends JFrame{
+	public Swing2() {
 		// 제목
 		setTitle("300x300 스윙 프레임 만들기");
 		// 창의 엑스 표시를 클릭시 종료하는 코드
@@ -35,16 +32,19 @@ public class Swing1 extends JFrame{
 		// html flex 랑 동일해요, 기본 가로로 순차 배치, 
 		// 마진 처럼, 왼쪽,오른쪽 정렬 : 수평, : 수직 간격 주고
 		// new FlowLayout(정렬방법,수평 간격,수직 간력)
-		contentPane.setLayout(new FlowLayout(FlowLayout.LEFT,100,100)); // 컨텐트팬에 FlowLayout
+		contentPane.setLayout(new BorderLayout()); // 컨텐트팬에 FlowLayout
 		// 배치관리자 달기
-		contentPane.add(new JButton("OK")); // OK 버튼 달기
-		contentPane.add(new JButton("Cancel")); // Cancel 버튼 달기
-		contentPane.add(new JButton("Ignore")); // Ignore 버튼 달기
+		// new BorderLayout() -> , 위치 , 동, 서,남,북,센터 : 상수 값. 
+		// contentPane.add(요소,위치)
+		contentPane.add(new JButton("OK"),BorderLayout.CENTER); // OK 버튼 달기
+		contentPane.add(new JButton("Cancel"),BorderLayout.EAST); // Cancel 버튼 달기
+		contentPane.add(new JButton("Ignore"),BorderLayout.WEST); // Ignore 버튼 달기
+		contentPane.add(new JButton("Home"),BorderLayout.SOUTH); // Ignore 버튼 달기
 		
 		// 버튼 컴포넌트 생성
 		JButton button = new JButton("Click");
 		// 컨텐트팬 여기에 버튼을 붙이는 코드 
-		contentPane.add(button); // 컨텐트팬에 버튼 부착
+		contentPane.add(button,BorderLayout.NORTH); // 컨텐트팬에 버튼 부착
 		
 		// 창 보여줄지 여부. 
 		setVisible(true); 
@@ -56,7 +56,7 @@ public class Swing1 extends JFrame{
 
 	public static void main(String[] args) {
 		// 인스턴스를 생성하는 과정 중에, 기본 생성자를 호출해서, 실행함. 
-		Swing1 swing1 = new Swing1() ;
+		Swing2 swing1 = new Swing2() ;
 
 	}
 
