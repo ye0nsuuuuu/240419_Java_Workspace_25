@@ -21,10 +21,11 @@ public class TimerThread extends Thread {
 		// TODO Auto-generated method stub
 		super.run();
 		while (n < 3) {
-			System.out.println(b);
+			System.out.println(b+"초 남음");
 			n++;
 			b--;
 			try {
+				//1000ms -> 1초, 
 				sleep(1000);
 			} catch (Exception e) {
 				// TODO: handle exception
