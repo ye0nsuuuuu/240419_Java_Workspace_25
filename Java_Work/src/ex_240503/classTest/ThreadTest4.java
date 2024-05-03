@@ -14,7 +14,7 @@ public class ThreadTest4 extends Thread {
 			// 잠시 대기
 			try {
 				// 1000ms = 1초 와 같다.
-				sleep(1000);
+				sleep(4000);
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
