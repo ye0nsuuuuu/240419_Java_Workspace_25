@@ -34,7 +34,7 @@ public class Swing2 extends JFrame{
 		// new FlowLayout(정렬방법,수평 간격,수직 간격)
 		
 		// new BorderLayout(수평 간격,수직 간격) : 
-		contentPane.setLayout(new BorderLayout(50,30)); // 컨텐트팬에 FlowLayout
+		contentPane.setLayout(new BorderLayout(30,50)); // 컨텐트팬에 FlowLayout
 		// 배치관리자 달기
 		// new BorderLayout() -> , 위치 , 동, 서,남,북,센터 : 상수 값. 
 		// contentPane.add(요소,위치)
@@ -45,8 +45,10 @@ public class Swing2 extends JFrame{
 		
 		// 버튼 컴포넌트 생성
 		JButton button = new JButton("Click");
+		JButton testButton = new JButton("testButton");
 		// 컨텐트팬 여기에 버튼을 붙이는 코드 
 		contentPane.add(button,BorderLayout.NORTH); // 컨텐트팬에 버튼 부착
+//		contentPane.add(testButton,BorderLayout.SOUTH); // 컨텐트팬에 버튼 부착
 		
 		// 창 보여줄지 여부. 
 		setVisible(true); 

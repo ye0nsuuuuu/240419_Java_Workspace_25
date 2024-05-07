@@ -43,8 +43,10 @@ public class Swing1 extends JFrame{
 		
 		// 버튼 컴포넌트 생성
 		JButton button = new JButton("Click");
+		JButton testButton = new JButton("testButton");
 		// 컨텐트팬 여기에 버튼을 붙이는 코드 
 		contentPane.add(button); // 컨텐트팬에 버튼 부착
+		contentPane.add(testButton);
 		
 		// 창 보여줄지 여부. 
 		setVisible(true); 

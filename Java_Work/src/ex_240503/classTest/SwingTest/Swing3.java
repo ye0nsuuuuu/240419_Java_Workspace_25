@@ -37,7 +37,7 @@ public class Swing3 extends JFrame{
 		
 		// new BorderLayout(수평 간격,수직 간격) : 
 		//new GridLayout(행,열,수평 간격,수직 간격)
-		contentPane.setLayout(new GridLayout(3,4,20,10)); // 컨텐트팬에 FlowLayout
+		contentPane.setLayout(new GridLayout(6,2,20,10)); // 컨텐트팬에 FlowLayout
 		// 배치관리자 달기
 		// new BorderLayout() -> , 위치 , 동, 서,남,북,센터 : 상수 값. 
 		// contentPane.add(요소,위치)
@@ -53,6 +53,7 @@ public class Swing3 extends JFrame{
 		contentPane.add(new JButton("Home10"));
 		contentPane.add(new JButton("Home11"));
 		contentPane.add(new JButton("Home12"));
+		
 		
 		
 		
