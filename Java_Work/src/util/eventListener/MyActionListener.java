@@ -27,12 +27,22 @@ public class MyActionListener implements ActionListener{
 		// 버튼 타입으로 변경하기. 
 		JButton testBtn = (JButton) event.getSource();
 		
+		//미니실습, 작업순서4, 이벤트 정보를 가져와서, 후처리 하기.. 
+		// 위의 testBtn , 재사용
+		
 		//작업순서5, 정보를 받은 버튼에서, 버튼의 이름 조회. 
 		// testBtn.getText() 의 이름 조회. 
 		if (testBtn.getText().equals("test")) {
 			testBtn.setText("테스트");
-		} else {
+			//미니실습, 작업순서5, 가지고 온 이벤트 정보를, 버튼으로 타입 변경 후, 
+			// 버튼의 이름의 문자열의 값을 비교 후, 후처리 함. 
+		} else if (testBtn.getText().equals("테스트")) {
 			testBtn.setText("test");
+		}
+		else if (testBtn.getText().equals("test2")) {
+			testBtn.setText("테스트2");
+		}else if (testBtn.getText().equals("테스트2")) {
+			testBtn.setText("test2");
 		}
 	}
 

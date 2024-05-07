@@ -24,6 +24,10 @@ public class EventTest1 extends JFrame{
 		c.setLayout(new FlowLayout());
 		// 요소, 컴포넌트라고도 부름. 버튼. 
 		JButton btn = new JButton("test");
+		
+		//미니실습, 작업순서1, 그림 그리기, 버튼 추가.
+		JButton btn2 = new JButton("test2");
+		
 		// 버튼을 클릭시, 리스너를 등록하기. 
 		// 리스너는, 따로 클래스를 만들어서, 재사용을 함.
 		// 1 독립 클래스, 2 내부클래스, 3 익명클래스
@@ -35,6 +39,13 @@ public class EventTest1 extends JFrame{
 		btn.addActionListener(new MyActionListener());
 		// 패널에 버튼 붙이기 작업. 
 		c.add(btn);
+		
+		//미니실습, 작업순서2, 버튼 패널에 붙이기.
+		c.add(btn2);
+		
+		//미니실습, 작업순서3, 이벤트 처리기(리스너) 붙이기. 
+		btn2.addActionListener(new MyActionListener());
+		
 		// 창 크기,
 		setSize(250, 120);
 		// 모든 요소를 화면에 보여줄 여부 
