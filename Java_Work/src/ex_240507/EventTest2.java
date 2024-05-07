@@ -30,6 +30,9 @@ public class EventTest2 extends JFrame {
 		// 미니실습, 작업순서1, 그림 그리기, 버튼 추가.
 		JButton btn2 = new JButton("test2");
 
+		// 미니실습, 작업순서1, 그림 그리기, 버튼 추가.
+		JButton btn3 = new JButton("test3");
+
 		// 버튼을 클릭시, 리스너를 등록하기.
 		// 리스너는, 따로 클래스를 만들어서, 재사용을 함.
 		// 1 독립 클래스, 2 내부클래스, 3 익명클래스
@@ -55,23 +58,41 @@ public class EventTest2 extends JFrame {
 					testBtn.setText("테스트");
 				} else if (testBtn.getText().equals("테스트")) {
 					testBtn.setText("test");
-				} else if (testBtn.getText().equals("test2")) {
-					testBtn.setText("테스트2");
-				} else if (testBtn.getText().equals("테스트2")) {
-					testBtn.setText("test2");
 				}
 			}// actionPerformed 닫기
 
 		});// 익명클래스 구현 닫는 부분.
-		
+
 		// 패널에 버튼 붙이기 작업.
 		c.add(btn);
 
 		// 미니실습, 작업순서2, 버튼 패널에 붙이기.
 		c.add(btn2);
 
+		// 미니실습, 작업순서2, 버튼 패널에 붙이기.
+		c.add(btn3);
+
 		// 미니실습, 작업순서3, 이벤트 처리기(리스너) 붙이기.
 		btn2.addActionListener(new MyActionListener());
+
+		// 미니실습, 작업순서3, 이벤트 처리기(리스너) 붙이기. 익명 클래스로 구현.
+		btn3.addActionListener(
+				// 부모 클래스(인터페이스)
+				new ActionListener() {
+
+					public void actionPerformed(ActionEvent event) {
+
+						JButton testBtn = (JButton) event.getSource();
+
+						if (testBtn.getText().equals("test3")) {
+							testBtn.setText("테스트3");
+						} else if (testBtn.getText().equals("테스트3")) {
+							testBtn.setText("test3");
+						} 
+					}// actionPerformed 닫기
+					
+				}
+				);
 
 		// 창 크기,
 		setSize(250, 120);
