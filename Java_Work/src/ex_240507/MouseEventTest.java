@@ -14,7 +14,7 @@ public class MouseEventTest extends JFrame {
 
 	// 생성자, -> JLabel 이라는 참조형 변수를 받는 매개변수 선언. 
 	// Hello 라는 문자열 라벨도, 인스턴스 임. 
-	public MouseEventTest(JLabel jaJLabel) {
+	public MouseEventTest(JLabel jaJLabel, JLabel jaJLabel2) {
 
 		setTitle("Mouse 이벤트 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,12 +23,17 @@ public class MouseEventTest extends JFrame {
 		Container c = getContentPane();
 		
 		// 마우스로 클릭시 이벤트 처리기를 붙이기 작업, 
+		
 		// 방법1) 독립된 클래스 버전
 		// 각 요소마다, 이벤트 처리기가 각각 다르다. 
 //		c.addMouseListener(new MyMouseListener(jaJLabel));
 		
 		// 방법2) 익명 클래스 버전
+		// 패널에 전체 크기에 마우스 이벤트 리스너 처리기 붙이기. 
+		// 예) 패널은, 프레임(윈도우창), 어느 곳을 클릭을 해도 동작하게끔 작업함.
+		// 비교, 앞에는 버튼을 클릭시 , 이벤트 처리 되게끔. 
 		c.addMouseListener(
+				// 익명 클래스, 슈퍼클래스(부모클래스, 부모 타입의 인터페이스)
 				new MouseListener() {
 
 					@Override
@@ -36,6 +41,7 @@ public class MouseEventTest extends JFrame {
 						int x = event.getX(); // 마우스의 클릭 좌표 x
 						int y = event.getY(); // 마우스의 클릭 좌표 y
 						jaJLabel.setLocation(x, y); // (x,y) 위치로 레이블 이동
+						jaJLabel2.setLocation(x+20, y-30); // (x,y) 위치로 레이블 이동
 						
 					}
 
@@ -69,10 +75,13 @@ public class MouseEventTest extends JFrame {
 		c.setLayout(null);
 		// jaJLabel 의 가로 , 세로 크기
 		jaJLabel.setSize(50, 20); // 레이블의 크기 50x20 설정
+		jaJLabel2.setSize(100, 20); // 레이블의 크기 50x20 설정
 		// jaJLabel의 시작 위치. 
 		jaJLabel.setLocation(30, 30); // 레이블의 위치 (30,30)으로 설정
+		jaJLabel2.setLocation(100, 100); // 레이블의 위치 (30,30)으로 설정
 		// 라벨을 패널에 붙이기. 
 		c.add(jaJLabel);
+		c.add(jaJLabel2);
 		// 윈도우 창의 크기
 		setSize(200, 200);
 		// 모든 요소를 보열줄지 여부. 
@@ -82,8 +91,12 @@ public class MouseEventTest extends JFrame {
 	public static void main(String[] args) {
 		// 인스턴스 생성시, 라벨 여기서 추가할 예정. 
 		// 인스턴스 멤버, 
+		// 레퍼런스, 참조형, 인스턴스 -> 집주소 , 0x100
 		JLabel la = new JLabel("Hello"); // "Hello" 레이블
-		MouseEventTest mouseEventTest = new MouseEventTest(la);
+		// 레퍼런스, 참조형, 인스턴스 -> 집주소 , 0x200
+		JLabel la2 = new JLabel("오늘 뭐 먹지?"); // "Hello" 레이블
+		// 인스턴스 생성 , A a = new A();, 사용하는 코드, 
+		MouseEventTest mouseEventTest = new MouseEventTest(la,la2);
 
 	}
 
