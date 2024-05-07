@@ -30,6 +30,8 @@ public class EventTest1 extends JFrame{
 		// 이벤트 리스너, 일회용으로 많이 사용하지만, 
 		// 자주 반복적으로 작업시, 1,2, 따로 이름있는 클래스
 		// 만들어서 재사용을함. 
+		
+		// 작업순서, 마지막, 이벤트 처리기 적용하기. 
 		btn.addActionListener(new MyActionListener());
 		// 패널에 버튼 붙이기 작업. 
 		c.add(btn);
@@ -40,7 +42,8 @@ public class EventTest1 extends JFrame{
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 화면을 그리는 인스턴스 생성 , 실행하기. 
+		EventTest1 eventTest1 = new EventTest1();
 
 	}
 
