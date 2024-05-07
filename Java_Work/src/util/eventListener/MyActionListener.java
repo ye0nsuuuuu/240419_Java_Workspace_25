@@ -44,7 +44,7 @@ public class MyActionListener implements ActionListener{
 		}else if (testBtn.getText().equals("테스트2")) {
 			testBtn.setText("test2");
 		}
-	}
+	}// actionPerformed 닫기
 
 }
 
