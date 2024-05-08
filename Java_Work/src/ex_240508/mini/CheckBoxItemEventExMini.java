@@ -26,8 +26,9 @@ public class CheckBoxItemEventExMini extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		
-		// 패널에 라벨 붙이기 
-		c.add(new JLabel("돼지국밥 9500원, 회덮밥 10000원, 돌솥비빔밥 7000원, 찜닭 20000원, 햄버거 8000원"));
+		// 패널에 라벨 붙이기
+		JLabel menuJLabel = new JLabel("돼지국밥 9500원, 회덮밥 10000원, 돌솥비빔밥 7000원, 찜닭 20000원, 햄버거 8000원");
+		c.add(menuJLabel);
 		
 		sumLabel = new JLabel("현재 0 원 입니다.");
 		
@@ -56,13 +57,26 @@ public class CheckBoxItemEventExMini extends JFrame {
 					
 					@Override
 					public void actionPerformed(ActionEvent event) {
+						System.out.println("작업순서1 , 자동 메뉴 램덤 추천 클릭");
 						JButton testBtn = (JButton) event.getSource();
 						if (testBtn.getText().equals("자동 메뉴 랜덤 추천")) {
-							//랜덤한 정수 뽑기. 
-							int randomNum = RandomSelectNumber.selectInt(5);
+							//랜덤한 정수 뽑기.
+							// randomNum : 정수 : 0이상 5미만, 예) 3 뽑힘
+							// 1 이상 5미만
+							System.out.println("작업순서2 , 자동 메뉴 램덤 추천 클릭");
+							int randomNum = RandomSelectNumber.selectInt(4)+1;
 //							System.out.println("randomNum : "+ randomNum);
+							System.out.println("작업순서3 , 자동 메뉴 램덤 추천 클릭 randomNum: " + randomNum);
+							// randomNum : 3, 3번을 반복, 0, 1, 2
 							for (int i = 0; i < randomNum; i++) {
-								fruits[i].setSelected(true);
+								// randomNum : 3 , 0이상 3미만
+								System.out.println("작업순서4 , 자동 메뉴 램덤 추천 클릭 : 반복문 안");
+								int randomNum2 = RandomSelectNumber.selectInt(5);
+								System.out.println("작업순서5 , 자동 메뉴 램덤 추천 클릭 : 반복문 안 randomNum2: " + randomNum2);
+								// 체크박스 요소를 체크를 하는 메서드. 
+								fruits[randomNum2].setSelected(true);
+								System.out.println("작업순서6 , 자동 메뉴 램덤 추천 클릭 : 체크박스가 체크가 됨.");
+								
 							}
 						}
 						

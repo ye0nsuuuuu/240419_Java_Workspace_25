@@ -10,6 +10,9 @@ import javax.swing.JLabel;
 class MyItemListener implements ItemListener {
 	// 인스턴스 멤버,
 	private int sum = 0; // 가격의 합
+	
+	// A 클래스 -> B 클래스, 인스턴스를 전달하고, 
+	// B 클래스에서 받을 때, 멤버를 만들고, 생성자로 받기. 
 	private JCheckBox[] fruits;
 	private JLabel sumLabel;
 	
