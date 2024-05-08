@@ -23,3 +23,7 @@ CENTER, NORTH, NORTHEAST 등이 있습니다.
 weightx 및 weighty: 추가 공간이 있을 때 
 각 방향으로 컴포넌트가 얼마나 
 많은 공간을 추가로 차지할지 결정합니다
+
+
+
+

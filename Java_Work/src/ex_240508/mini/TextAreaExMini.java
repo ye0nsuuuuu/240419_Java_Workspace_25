@@ -17,9 +17,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class TextAreaExMini extends JFrame {
+	
 	private JTextArea ta = new JTextArea(7, 20);
 	
-	
+	// 인스턴스 멤버로 선언만하고, 아래에서 할당했음. 
+	// 각 메서드 안에서도 이용이 가능해요, -> 이 클래스 내부에 전역처럼 이용됨. 
 	JTextField nameField;
 	JTextField emailField;
 	JTextField passwordField;
@@ -28,17 +30,25 @@ public class TextAreaExMini extends JFrame {
 	JButton joinBtn;
 	JButton clearBtn;
 	
+	// 행과 열을 테이블 형식으로 배치 관리자. 
 	GridBagLayout gb;
+	// Constraints , 제약 조건, 행, 열의 위치, 크기, 여백, 가득채우기 등. 옵션을 지정 가능. 
 	GridBagConstraints gbc;
 
 	public TextAreaExMini() {
 		setTitle("텍스트영역 만들기 예제");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
+		
 //		c.setLayout(new FlowLayout());
+		// GridBagLayout, 인스턴스 생성. 
 		gb = new GridBagLayout();
+		// 패널에 붙이기 
 		setLayout(gb);
+		// GridBagConstraints, 옵션을 추가하는 도구. 
 		gbc = new GridBagConstraints();
+		
+		// 가로, 세로의 빈공간을 가득 채우겠다. 
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.weightx = 1.0;
 		gbc.weighty = 1.0;
@@ -47,6 +57,7 @@ public class TextAreaExMini extends JFrame {
 
 		JLabel name = new JLabel("이름 ");
 		nameField = new JTextField(20);
+		// gbAdd : 메서드 (배치할 요소(버튼,라벨),x(열), y(행), w(가로폭),h(세로높이))
 		gbAdd(name, 0, 0, 1, 1);
 		gbAdd(nameField, 1, 0, 3, 1);
 
@@ -54,12 +65,12 @@ public class TextAreaExMini extends JFrame {
 		emailField = new JTextField(20);
 		gbAdd(email, 0, 1, 1, 1);
 		gbAdd(emailField, 1, 1, 3, 1);
-
+//
 		JLabel password = new JLabel("패스워드 ");
 		passwordField = new JTextField(20);
 		gbAdd(password, 0, 2, 1, 1);
 		gbAdd(passwordField, 1, 2, 3, 1);
-		
+//		
 		JLabel passwordConfirm = new JLabel("패스워드 확인 ");
 		passwordConfirmField = new JTextField(20);
 		gbAdd(passwordConfirm, 0, 3, 1, 1);
@@ -88,10 +99,10 @@ public class TextAreaExMini extends JFrame {
 					//1차 라벨에 붙이기
 					resultLabel.setText("이름: " + name + ", 이메일 : " + email + ", 패스워드 : " + password + ", 패스워드 확인 : " + passwordConfirm);
 					//2차 텍스트 area 에 붙이기
-					StringBuffer sb = new StringBuffer();
+//					StringBuffer sb = new StringBuffer();
 					String result = "이름: " + name + ", 이메일 : " + email + ", 패스워드 : " + password + ", 패스워드 확인 : " + passwordConfirm; 
-					sb.append(result);
-					ta.append(sb.toString());
+//					sb.append(result);
+					ta.append(result);
 				} 			
 			}
 		});
