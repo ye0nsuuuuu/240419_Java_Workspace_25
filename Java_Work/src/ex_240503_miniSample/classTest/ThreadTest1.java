@@ -1,4 +1,4 @@
-package ex_240503.classTest;
+package ex_240503_miniSample.classTest;
 
 // 작업순서1, 클래스에서 스레드 클래스 상속 받기
 public class ThreadTest1 extends Thread {

@@ -1,4 +1,4 @@
-package ex_240503.classTest.SwingTest;
+package ex_240503_miniSample.classTest.SwingTest;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

@@ -1,4 +1,4 @@
-package ex_240503.BoardSample;
+package ex_240503_miniSample.BoardSample;
 
 public class MemberDTO {
 	// 모델클래스, 

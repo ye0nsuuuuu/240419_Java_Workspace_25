@@ -1,4 +1,4 @@
-package ex_240503.ArtBoardTest;
+package ex_240503_miniSample.ArtBoardTest;
 
 import javax.swing.JTabbedPane;
 

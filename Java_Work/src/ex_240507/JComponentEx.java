@@ -49,10 +49,14 @@ public class JComponentEx extends JFrame {
 		//이미지 라벨 넣기. 
 		// 순서1, 이미지 담는 인스턴스 만들기
 		ImageIcon testImg = new ImageIcon("src/util/images/sea2_300.png");
+		ImageIcon testImg2 = new ImageIcon("src/util/images/sea2_300.png");
 		// 순서2, 라벨에 이미지 담기, 
-		JLabel imgLabel = new JLabel(testImg); 
+		JLabel imgLabel = new JLabel(testImg);
+		JLabel imgLabel2 = new JLabel(testImg2);
 		// 순서3, 적용(붙이기)
 		c.add(imgLabel);
+		c.add(imgLabel2);
+		
 		
 		// 패널에 버튼1 추가
 		c.add(b1);
@@ -61,7 +65,7 @@ public class JComponentEx extends JFrame {
 		
 		c.add(j1);
 		// 창 크기
-		setSize(260, 200);
+		setSize(1000, 800);
 		// 모든 요소 보여줄지 여부.
 		setVisible(true);
 	}

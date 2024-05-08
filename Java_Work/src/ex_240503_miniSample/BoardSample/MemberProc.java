@@ -1,4 +1,4 @@
-package ex_240503.BoardSample;
+package ex_240503_miniSample.BoardSample;
 
 import java.awt.*;
 import java.sql.*;

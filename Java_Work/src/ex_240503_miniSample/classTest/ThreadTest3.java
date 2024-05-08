@@ -1,4 +1,4 @@
-package ex_240503.classTest;
+package ex_240503_miniSample.classTest;
 
 public class ThreadTest3 extends Thread {
 	int n = 0;
