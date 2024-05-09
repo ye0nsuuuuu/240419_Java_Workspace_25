@@ -103,16 +103,17 @@ ojdbc8_g.jar 선택. -> 결과 확익, -> Referrenced Libraries 에서 확인됨
 1. 오라클 데이터베이스 연동을 위한 4가지 정보를 문자열에 저장한다. 
 
 ex) 윈도우즈 교재 예제 
+
 String driver = "oracle.jdbc.driver.OracleDriver";
-String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+String url = "jdbc:oracle:thin:@localhost:1521:xe";
 String userid = "scott";
 String passwd = "tiger";
 
 나 
 String driver = "oracle.jdbc.driver.OracleDriver";
-String url = "jdbc:oracle:thin:@1.252.62.38:11521:orcl";
-String userid = "hr2";
-String passwd = "1234";
+String url = "jdbc:oracle:thin:@1.252.62.38:11521:xe";
+String userid = "scott";
+String passwd = "tiger";
 !
 
 드라이버(압축 파일) 내에 핵심이 되는 클래스 파일이 있다. 
@@ -238,7 +239,8 @@ Connection 등이다. 이 자원을 해제시킬 때에는 사용한 역순으�
 다음과 같이 자원을 해제한다. 
 
 ex)
-rs.close(); // ResultSet 을 사용한 경우 
+// 역순으로 작업을 함.
+rs.close(); // ResultSet 을 사용한 경우 , 조회 할 때만 사용함. 
 pstmt.close();
 con.close(); 
  
