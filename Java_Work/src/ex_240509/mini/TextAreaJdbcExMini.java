@@ -17,6 +17,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import ex_240509.mini.dao.ServiceDB;
+import ex_240509.mini.dto.MemberDTO;
 
 public class TextAreaJdbcExMini extends JFrame {
 	
@@ -118,9 +119,12 @@ public class TextAreaJdbcExMini extends JFrame {
 					String email = emailField.getText();
 					String password = passwordField.getText();
 					String passwordConfirm = passwordConfirmField.getText();
+					
 					// JDBC 이용해서, 디비에 데이터 저장. 
 					ServiceDB serviceDB = new ServiceDB();
-					serviceDB.insertMember(name, email, password);
+					// DTO 에 담아서, DTO를 전달하기. 
+					MemberDTO memberDTO = new MemberDTO( name, email, password);
+					serviceDB.insertMember(memberDTO);
 				} 			
 			}
 		});

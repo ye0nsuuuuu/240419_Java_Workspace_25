@@ -8,19 +8,30 @@ import java.util.Vector;
 
 import javax.swing.JOptionPane;
 
-import ex_240503_miniSample.BoardSample.MemberDTO;
+import ex_240509.mini.dto.MemberDTO;
+
+
 
 public class ServiceDB {
 
 	// 비지니스 로직 처리. 
 	
 	// 추가
-
-	public boolean insertMember(String name, String email, String password) {
+	// 회원 가입 버튼을 누를 때, 
+	// 입력 정보들이 어디 담겨 있나요? MemberDTO memberDTO
+	public boolean insertMember(MemberDTO memberDTO) {
 		boolean ok = false;
 
 		Connection con = null; // 연결
 		PreparedStatement pstmt = null; // 명령
+		
+		// MemberDTO memberDTO, 객체, 인스턴스, 게터, 세터. 
+		// 게터로 각 요소를 하나씩 꺼내기. 
+		int id = memberDTO.getId();
+		String name = memberDTO.getName();
+		String email = memberDTO.getEmail();
+		String password = memberDTO.getPassword();
+		
 
 		try {
 
