@@ -33,6 +33,7 @@ public class TextAreaJdbcExMini extends JFrame {
 	JButton joinBtn;
 	JButton selectBtn;
 	JButton updateBtn;
+	// 선언만 했음.
 	JButton deleteBtn;
 	JButton clearBtn;
 	
@@ -157,9 +158,34 @@ public class TextAreaJdbcExMini extends JFrame {
 				if (event.getSource() == deleteBtn) {
 					// 조회
 					ServiceDB serviceDB = new ServiceDB();
+					// 숫자 4 가져오기, 그런데 , 타입 ? 문자열
 					String user_id = userIdField.getText();
+					// 문자열 -> 기본형
 					int user_id_num = Integer.parseInt(user_id);
 					serviceDB.deleteMember(user_id_num);
+					
+				}
+			
+			}
+		});
+		
+		updateBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				if (event.getSource() == updateBtn) {
+					// 조회
+					ServiceDB serviceDB = new ServiceDB();
+					// 숫자 4 가져오기, 그런데 , 타입 ? 문자열
+					String user_id = userIdField.getText();
+					String user_name = nameField.getText();
+					String user_email = emailField.getText();
+					String user_password = passwordField.getText();
+					// 문자열 -> 기본형
+					int user_id_num = Integer.parseInt(user_id);
+//					System.out.println("user_id : " + user_id);
+//					System.out.println("user_name : " + user_name);
+//					System.out.println("user_email : " + user_email);
+//					System.out.println("user_password : " + user_password);
+					serviceDB.updateMember(user_id_num, user_name, user_email, user_password);
 					
 				}
 			
